@@ -3,16 +3,11 @@
     object-fit: cover;
     color:white!important
 }
-
 .navbar .navbar-brand img {
     width: 100px;
 }
-.nav-link img {
+.avatar {
     width: 30px;
-}
-.leftNav button{
-border: none;
-background-color: transparent;
 }
 header{
     padding-block: 10px;
@@ -21,6 +16,13 @@ header{
     width: calc(100% / 6);
     min-width: 200px
 }
-#carouselExample{
-    margin-bottom: 80px;
+footer{
+    padding-inline: 250px;
+}
+footer ion-icon{
+ font-size: 25px;
+ padding-right: 15px;
+}
+p{
+    font-size: small;
 }

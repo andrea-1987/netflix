@@ -14,23 +14,13 @@
   </head>
   <body class="bg-dark container-fluid">
     <nav class="navbar navbar-expand-lg d-flex justify-content-between">
-      <div >
-        <a class="navbar-brand" href="#"
-          ><img src="./assets/imgs/Netflix_Logo_RGB.png" alt=""/>
-        </a>
-        <button
-          class="navbar-toggler border-light"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+      <div class="d-flex">
+        <a class="navbar-brand" href="#"><img src="./assets/imgs/Netflix_Logo_RGB.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -44,50 +34,46 @@
               <a class="nav-link" href="#">Recently Added</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My list</a>
+              <a class="nav-link" href="#">My List</a>
             </li>
           </ul>
         </div>
-        </div>
-        <div class="leftNav d-none d-md-flex">
-          <button>
-            <input type="text" placeholder="search" />
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
-          <a class="nav-link" href="">Kids</a>
-          <button><ion-icon name="notifications-outline"></ion-icon></button>
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img src="./assets/imgs/avatar_netflix.png" alt="" />
+      </div>
+      <div class="d-flex align-items-center">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn" type="submit"><ion-icon name="search-outline"></ion-icon></button>
+        </form>
+        <span>Kids</span>
+        <ion-icon name="notifications-outline"></ion-icon>
+        <span class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="avatar" src="./assets/imgs/avatar_netflix.png" alt="">
           </a>
-        </div>
+          <ul class="dropdown-menu bg-dark ">
+            <li><a class="dropdown-item" href="#"></a><img class="avatar" src="./assets/imgs/avatar_netflix.png" alt=""></li>
+            <li><a class="dropdown-item" href="#"></a><img class="avatar" src="./assets/imgs/avatar_netflix2.jpg" alt=""></li>
+            <li><a class="dropdown-item" href="#"></a><img class="avatar" src="./assets/imgs/avatar_netflix3.jpg" alt=""></li>
+          </ul>
+        </span>
       </div>
     </nav>
     <header class="d-flex justify-content-between ">
-      <div class="d-flex w-50  h-50">
-        <h2 >TV Shows</h2>
+      <div class="d-flex align-items-center justify-content-between">
+        <h2 class="me-5">TV Shows</h2>
         <div class="dropdown">
-          <button
-            class="bg-dark text-light border-light dropdown-toggle mx-5"
-            type="button"
-            data-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Generi
-          </button>
-          <div class="dropdown-menu bg-dark border-light">
-            <a class="dropdown-item text-light" href="#">Azione</a>
-            <a class="dropdown-item text-light" href="#">Commedia</a>
-            <a class="dropdown-item text-light" href="#">Horror</a>
+            <button class="dropdown-toggle bg-dark border-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         Genres
+            </button>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item" href="#"></a>Azione</li>
+              <li><a class="dropdown-item" href="#"></a>Horror</li>
+              <li><a class="dropdown-item" href="#"></a>Fantasy</li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="d-flex h-50">
+      <div class="d-flex align-items-center">
         <button class="bg-dark border-light">
           <ion-icon name="menu-outline"></ion-icon>
         </button>
@@ -96,162 +82,264 @@
         </button>
       </div>
     </header>
-    <main >
-      <div id="carouselExample" class="carousel slide">
+    <main class="mt-3">
+      <h4>Trending Now</h4>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3 mb-5">
         <div class="carousel-inner">
-          <div class="carousel-item active d-flex justify-content-center">
-            <div class="cards ">
-              <img src="./assets/imgs/movies/1.png"class="d-block w-100" alt="..." />
+          <div class="carousel-item active d-flex">
+            <div class="cards">
+            <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
             </div>
-            <div class="cards d-none d-sm-block">
-              <img src="./assets/imgs/movies/2.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/4.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-lg-block">
-              <img src="./assets/imgs/movies/5.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-xl-block">
-              <img src="./assets/imgs/movies/6.png"class="d-block w-100"alt="..."/>
-            </div>
+            <div class="cards">
+              <img src="./assets/imgs/movies/2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/4.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/5.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/6.png" class="d-block w-100" alt="...">
+                      </div>
           </div>
-          <div class="carousel-item d-flex justify-content-center">
-            <div class="cards ">
-              <img src="./assets/imgs/movies/2.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-sm-block">
-              <img src="./assets/imgs/movies/1.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/4.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-lg-block">
-              <img src="./assets/imgs/movies/5.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-xl-block">
-              <img src="./assets/imgs/movies/6.png"class="d-block w-100"alt="..."/>
-            </div>
+          <div class="carousel-item d-flex">
+            <div class="cards">
+              <img src="./assets/imgs/movies/7.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/8.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/9.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/10.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/11.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="cards">
+                        <img src="./assets/imgs/movies/12.png" class="d-block w-100" alt="...">
+                        </div>
           </div>
-          <div class="carousel-item d-flex justify-content-center">
-            <div class="cards ">
-              <img src="./assets/imgs/movies/3.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-sm-block">
-              <img src="./assets/imgs/movies/2.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/4.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-lg-block">
-              <img src="./assets/imgs/movies/5.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-xl-block">
-              <img src="./assets/imgs/movies/6.png"class="d-block w-100"alt="..."/>
-            </div>
+          <div class="carousel-item d-flex">
+            <div class="cards">
+              <img src="./assets/imgs/movies/13.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/14.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/15.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/16.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/17.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="cards">
+                        <img src="./assets/imgs/movies/18.png" class="d-block w-100" alt="...">
+                        </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <div id="carouselExample1" class="carousel slide">
+      <h4>Watch it Again</h4>
+      <div id="carouselExampleFade1" class="carousel slide carousel-fade mt-3 mb-5">
         <div class="carousel-inner">
           <div class="carousel-item active d-flex">
-            <div class="cards ">
-              <img src="./assets/imgs/movies/1.png"class="d-block w-100" alt="..." />
+            <div class="cards">
+            <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
             </div>
-            <div class="cards d-none d-sm-block">
-              <img src="./assets/imgs/movies/2.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/4.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-lg-block">
-              <img src="./assets/imgs/movies/5.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-xl-block">
-              <img src="./assets/imgs/movies/6.png"class="d-block w-100"alt="..."/>
-            </div> 
+            <div class="cards">
+              <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                      </div>
           </div>
           <div class="carousel-item d-flex">
-            <div class="cards ">
-              <img src="./assets/imgs/movies/1.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-sm-block">
-              <img src="./assets/imgs/movies/2.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/4.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-lg-block">
-              <img src="./assets/imgs/movies/5.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-xl-block">
-              <img src="./assets/imgs/movies/6.png"class="d-block w-100"alt="..."/>
-            </div>
+            <div class="cards">
+              <img src="./assets/imgs/movies/2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="cards">
+                        <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                        </div>
           </div>
           <div class="carousel-item d-flex">
-            <div class="cards ">
-              <img src="./assets/imgs/movies/1.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-sm-block">
-              <img src="./assets/imgs/movies/2.png"class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="..." />
-            </div>
-            <div class="cards d-none d-md-block">
-              <img src="./assets/imgs/movies/4.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-lg-block">
-              <img src="./assets/imgs/movies/5.png"class="d-block w-100"alt="..."/>
-            </div>
-            <div class="cards d-none d-xl-block">
-              <img src="./assets/imgs/movies/6.png"class="d-block w-100"alt="..."/>
-            </div>
+            <div class="cards">
+              <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="cards">
+                        <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                        </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade1" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade1" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <h4>New Releases</h4>
+      <div id="carouselExampleFade2" class="carousel slide carousel-fade mt-3 mb-5">
+        <div class="carousel-inner">
+          <div class="carousel-item active d-flex">
+            <div class="cards">
+            <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="cards">
+              <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                      </div>
+          </div>
+          <div class="carousel-item d-flex">
+            <div class="cards">
+              <img src="./assets/imgs/movies/2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="cards">
+                        <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                        </div>
+          </div>
+          <div class="carousel-item d-flex">
+            <div class="cards">
+              <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="cards">
+                <img src="./assets/imgs/movies/3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="cards">
+                  <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="cards">
+                    <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="cards">
+                      <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="cards">
+                        <img src="./assets/imgs/movies/1.png" class="d-block w-100" alt="...">
+                        </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
     </main>
+    <footer class="d-none d-md-block">
+      <div class="d-flex  mb-5" >
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </div>
+      <div class="row">
+        <div class="col-2">
+        <p>Audio and Subtitles</p>
+        <p>Media Center</p>
+        <p>Privacy</p>
+        <p>Contact Us</p>
+        </div>
+        <div class="col-2">
+          <p>Audio Description</p>
+          <p>Investor Relations</p>
+          <p>Legal Notices</p>
+       </div>
+        <div class="col-2">
+          <p>Help Center</p>
+          <p>Jobs</p>
+          <p>Cookie Preferences</p>
+        </div>
+        <div class="col-2">
+          <p>Gift Cards</p>
+          <p>Term of Use</p>
+          <p>Corporate Information</p>
+        </div>
+    </div>
+      <div>
+        <button class="border-light bg-dark my-3">Service code</button>
+      </div>
+        <p class="d-flex align-items-center ">
+          <ion-icon name="reload-circle-outline"></ion-icon>1997-2019 Netflix,inc. {i-0jsodjnvfiiodsa}
+        </p>
+    </footer>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
