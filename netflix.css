@@ -14,7 +14,10 @@ header{
 }
 .cards{
     width: calc(100% / 6);
-    min-width: 200px
+    min-width: 200px;
+}
+.cards:hover{
+
 }
 footer{
     padding-inline: 250px;
