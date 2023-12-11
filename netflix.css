@@ -15,9 +15,15 @@
 header {
   padding-block: 10px;
 }
+.carousel-inner{
+  overflow: visible;
+}
 .cards {
   width: calc(100% / 6);
   min-width: 200px;
+}
+.cards:hover{
+  transform: scale(1,1.1);
 }
 footer {
   padding-inline: 250px;

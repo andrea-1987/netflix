@@ -79,24 +79,30 @@ const movies=[
         immage:"./assets/imgs/movies/18.png",
     },
 ]
-movies.sort(()=>Math.random()-0.5)
-let carousel=document.querySelector(".carousel-inner")
-const carouselItems=Math.round(movies.length/6)
-for(i=0;i<carouselItems;i++){
-    let start=i*6
-    let end=start+5
-    for(y=start;y<=end;y++){
-if(y===start){
-    carousel.innerHTML+=
- `<div class="carousel-item ${i===0?"active":""} d-flex">
-    <div class="cards">
-    <img src="${movies[y].immage}" class="d-block w-100" alt="...">
-    </div>
-  </div>`
- }else if(y<=end){
-carousel.innerHTML+=`<div class="cards">
-<img src="${movies[y].immage}" class="d-block w-100" alt="...">
-</div>`
- }
+let carousel=document.querySelectorAll(".carousel-inner")
+  for(let y=0;y<carousel.length;y++){
+      let carousels=carousel[y]
+      for(let i=0;i<movies.length;i++){
+            carousels.innerHTML+=
+          `<div class="carousel-item ${i===0?"active":""} d-flex">
+          <div class="cards">
+          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          </div>
+          <div class="cards">
+          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          </div>
+          <div class="cards">
+          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          </div>
+          <div class="cards">
+          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          </div>
+          <div class="cards">
+          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          </div>
+          <div class="cards">
+          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          </div>
+          </div>`
+        }
 }
-};
