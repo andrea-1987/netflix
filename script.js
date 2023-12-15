@@ -106,3 +106,19 @@ let carousel=document.querySelectorAll(".carousel-inner")
           </div>`
         }
 }
+///------WORK IN PROGRESS\\\
+
+
+let find=function(){
+    const foundMovies=document.querySelector("#found")
+    const foundTitle=document.querySelector("#result")
+    let inputValue=input.value
+    for (let i = 0; i < movies.length; i++) {
+        let findMovies=movies[i]
+
+        if(findMovies.title===inputValue){
+            foundMovies.innerHTML=`<div class="cards"><img src="${findMovies.immage}" alt=""> </div>`;
+            foundTitle.innerHTML=`<h4>${findMovies.title}</h4>`
+        }
+    }
+}

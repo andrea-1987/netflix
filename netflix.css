@@ -1,7 +1,7 @@
 * :not(.lookingFor) {
   box-sizing: border-box;
   object-fit: cover;
-  color: white !important;
+  color: white;
 }
 .navbar .navbar-brand img {
   width: 100px;
@@ -15,7 +15,10 @@
 header {
   padding-block: 10px;
 }
-.carousel-inner{
+#result{
+  text-transform: capitalize;
+}
+.carousel-inner,#found{
   overflow: visible;
 }
 .cards {
