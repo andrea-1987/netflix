@@ -17,6 +17,7 @@ header {
 }
 #result{
   text-transform: capitalize;
+  animation: searchTitle 1s ease-in;
 }
 .carousel-inner,#found{
   overflow: visible;
@@ -37,4 +38,8 @@ footer ion-icon {
 }
 p {
   font-size: small;
+}
+@keyframes searchTitle{
+  from{color:wheat }
+  to{ color: red}
 }

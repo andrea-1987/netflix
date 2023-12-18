@@ -112,7 +112,7 @@ let carousel=document.querySelectorAll(".carousel-inner")
 let find=function(){
     const foundMovies=document.querySelector("#found")
     const foundTitle=document.querySelector("#result")
-    let inputValue=input.value
+    let inputValue=input.value.toLowerCase()
     for (let i = 0; i < movies.length; i++) {
         let findMovies=movies[i]
 
