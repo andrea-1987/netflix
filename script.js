@@ -86,22 +86,22 @@ let carousel=document.querySelectorAll(".carousel-inner")
             carousels.innerHTML+=
           `<div class="carousel-item ${i===0?"active":""} d-flex">
           <div class="cards">
-          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          <img src="${movies[Math.floor(Math.random()*movies.length)].immage}" class="d-block w-100" alt="...">
           </div>
           <div class="cards">
-          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          <img src="${movies[Math.floor(Math.random()*movies.length)].immage}" class="d-block w-100" alt="...">
           </div>
           <div class="cards">
-          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          <img src="${movies[Math.floor(Math.random()*movies.length)].immage}" class="d-block w-100" alt="...">
           </div>
           <div class="cards">
-          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          <img src="${movies[Math.floor(Math.random()*movies.length)].immage}" class="d-block w-100" alt="...">
           </div>
           <div class="cards">
-          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          <img src="${movies[Math.floor(Math.random()*movies.length)].immage}" class="d-block w-100" alt="...">
           </div>
           <div class="cards">
-          <img src="${movies[Math.floor(Math.random()*i)].immage}" class="d-block w-100" alt="...">
+          <img src="${movies[Math.floor(Math.random()*movies.length)].immage}" class="d-block w-100" alt="...">
           </div>
           </div>`
         }
