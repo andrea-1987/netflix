@@ -15,9 +15,9 @@
 header {
   padding-block: 10px;
 }
-#result{
+#result h4{
   text-transform: capitalize;
-  animation: searchTitle 1s ease-in;
+  animation: searchTitle 2s ease-in-out ;
 }
 .carousel-inner,#found{
   overflow: visible;
